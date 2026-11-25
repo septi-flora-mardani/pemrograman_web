@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog &amp; Jadwal Sewa - RentalKu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="logo">RentalKu</div></header>
+  <nav>
+    <a href="index.html">index &amp; Data Diri</a>
+    <a href="katalog.html" class="active">Katalog &amp; Pilih Kendaraan</a>
+    <a href="syarat.html">Syarat &amp; Pembayaran</a>
+  </nav>
+
+  <main class="grid-container">
+    <section class="kartu">
+      <h2>🚗 Kategori Mobil</h2>
+      <div class="grid-kendaraan">
+        <article class="card">
+          <img src="avanza.webp" alt="Toyota Avanza">
+          <div class="card-content">
+            <h3>Toyota Avanza</h3>
+            <p>Kapasitas: 7 Penumpang<br>Transmisi: Manual / Matic</p>
+            <p class="harga">Rp 300.000 / Hari</p>
+            <a href="#form-kendaraan" class="btn-pesan-kartu">Pilih Avanza</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="brio.webp" alt="Honda Brio">
+          <div class="card-content">
+            <h3>Honda Brio</h3>
+            <p>Kapasitas: 5 Penumpang<br>Transmisi: Matic</p>
+            <p class="harga">Rp 250.000 / Hari</p>
+            <a href="#form-kendaraan" class="btn-pesan-kartu">Pilih Brio</a>
+          </div>
+        </article>
+      </div>
+
+      <h2>🛵 Kategori Motor</h2>
+      <div class="grid-kendaraan">
+        <article class="card">
+          <img src="nmax.webp" alt="Yamaha NMAX">
+          <div class="card-content">
+            <h3>Yamaha NMAX</h3>
+            <p>Fasilitas: 2 Helm, Jas Hujan</p>
+            <p class="harga">Rp 120.000 / Hari</p>
+            <a href="#form-kendaraan" class="btn-pesan-kartu">Pilih NMAX</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="beat.webp" alt="Honda Beat">
+          <div class="card-content">
+            <h3>Honda Beat</h3>
+            <p>Fasilitas: 2 Helm, Jas Hujan</p>
+            <p class="harga">Rp 80.000 / Hari</p>
+            <a href="#form-kendaraan" class="btn-pesan-kartu">Pilih Beat</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="kartu" id="form-kendaraan">
+      <h2>2. Detail Kendaraan &amp; Jadwal Sewa</h2>
+      <form id="form-pesanan-2" action="syarat.html">
+        <fieldset>
+          <legend>Pilihan Unit &amp; Durasi</legend>
+          
+          <div class="form-row">
+            <div class="grup-input">
+              <label for="pilih-kendaraan">Pilih Kendaraan:</label>
+              <select id="pilih-kendaraan" name="kendaraan" required>
+                <option value="">-- Pilih Kendaraan --</option>
+                <option value="300000">Toyota Avanza (Rp 300.000/hari)</option>
+                <option value="250000">Honda Brio (Rp 250.000/hari)</option>
+                <option value="120000">Yamaha NMAX (Rp 120.000/hari)</option>
+                <option value="80000">Honda Beat (Rp 80.000/hari)</option>
+              </select>
+            </div>
+
+            <div class="grup-input">
+              <label for="lama-sewa">Lama Sewa (Hari):</label>
+              <input type="number" id="lama-sewa" name="lamaSewa" min="1" value="1" required>
+            </div>
+          </div>
+
+          <div class="grup-input">
+            <label>
+              <input type="checkbox" id="cek-helm" value="20000"> Sewa 1 Helm (Rp 20.000)
+            </label>
+            <label>
+              <input type="checkbox" id="cek-supir" value="150000"> Gunakan Jasa Supir (Rp 150.000/hari)
+            </label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn-primary">Lanjut ke Syarat &amp; Pembayaran &rarr;</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <script src="katalog.js"></script>
+</body>
+</html>
